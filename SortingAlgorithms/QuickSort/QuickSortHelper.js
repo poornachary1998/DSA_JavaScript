@@ -1,4 +1,4 @@
-function QuickSortHelper(arr, start = 0 , end = arr.length-1){
+function QuickSortHelper(arr, start = 0 , end = arr.length){
     let pivotValue = arr[start];
     let pivotIndex = start;
 for(let i = start +1;i<=end;i++){
