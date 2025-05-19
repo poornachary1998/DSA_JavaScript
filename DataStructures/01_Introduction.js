@@ -19,3 +19,23 @@ let secondStudent = new Student("Charan", "N");
 secondStudent.education = 10
 console.log(secondStudent);
 // Student { firstName: 'Charan', lastName: 'N', education: 10 }
+
+
+//Instance Methods.
+
+
+class HighSchoolStudent{
+    constructor(firstName, lastName){
+this.firstName = firstName;
+this.lastName =lastName;
+    }
+    fullName(){
+        return `your fullName is ${this.firstName} ${this.lastName}`
+    }
+}
+let student1 = new HighSchoolStudent("james", "son")
+console.log(student1)
+// HighSchoolStudent { firstName: 'james', lastName: 'son' }
+
+console.log(student1.fullName())
+// your fullName is james son
