@@ -1,9 +1,9 @@
-// POP Method pseudo code:
-// IF there are no nodes in list return undefined.
-// Loop through the list until you react the last time.
-// Set the next property of the last 2nd node as null.
-// Decrement the length by 1.
-// Return the node that is removed.
+// Shift method: 
+// If theere are no nodes, return undefined.
+// store the current head property to variable temp; 
+// set the head property to current head next property
+// decrement length by 1;
+//  return value of node removed.
 
 class Node{
     constructor(val){
