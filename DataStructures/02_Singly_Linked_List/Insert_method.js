@@ -3,6 +3,7 @@
 //If the index is the same as length, push a new node to end of list.
 // If the index is at 0, unshift a new node to the start of list/
 //Otherwise, use the get method to access the node at index - 1( because pre node).
+// create a new node with value passed.
 // set the next property on that node to be the new node.
 // set the next property on new Node to be the previous next.
 // Increment the length 
