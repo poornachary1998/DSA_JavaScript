@@ -1,11 +1,29 @@
-// Remove Method
-// If the index is less than zero or greater than the length return undefined.
-//If the index is the same as length, use pop;
-// If the index is at 0, shift a new node
-//Otherwise, use the get method to access the node at index - 1( because pre node).
-// set the next property on that node to the next of next node.
-// decrement the length 
-// return removed node.
+// Reverse Method :
+// swap head and tail.
+// create variable called prev
+// create a variable called node initialise to head property/
+// loop through the list.
+// set next to be the next property on whatever node is.
+// set the next property on node to be whatever prev is.
+// set the prev to be the value of node variable.
+// set the node variable to be the valie of the next variable.
+
+//Initial:
+//         [reversed]    [to do]
+// Step 0:  null           1 → 2 → 3 → 4 → null
+
+// After Step 1 (process 1):
+// Step 1:  1 → null       2 → 3 → 4 → null
+
+// After Step 2 (process 2):
+// Step 2:  2 → 1 → null   3 → 4 → null
+
+// After Step 3 (process 3):
+// Step 3:  3 → 2 → 1 → null   4 → null
+
+// After Step 4 (process 4):
+// Step 4:  4 → 3 → 2 → 1 → null
+
 
 class Node{
     constructor(val){
@@ -124,6 +142,30 @@ console.log(foundNode)
         this.length--;
         return removingNode
      }
+
+  reverse() {
+    // 1) Swap head and tail
+    let node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+
+    // 2) Initialize pointers
+    let prev = null;
+    let next = null;
+
+      for (let i = 0; i < this.length; i++) {
+      // 3a. Save next
+      next = node.next;
+      // 3b. Reverse pointer
+      node.next = prev;
+      // 3c. Step prev and node forward
+      prev = node;
+      node = next;
+    }
+
+    return this;
+  }
+
 }
 
 
