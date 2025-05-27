@@ -1,15 +1,19 @@
-//shift method: Doubly Linked list
-//psuedo code:
+//get method : Accessing a node in a DLL.
+//pseudo code:
 
-// if there is no tail and no head retrun undefined.
-// Store the current tail in a variable to retrurn later.
-// If the length is 1, set the head and tail property to be null.
-// update the head to be next of the old head.
-// set the heads prev property to null.
-// set the old head next to null.
-// Decrement the length;
-// return value removed / this
+// In SLL, if the neeed value is at 4th index we need to traverse the node from startting till the index is found,
+// In DLL, we can check if the index is close to 0 length or this.length - 1( tail ) and traverse to required node.
+// Ex: If there are 1000 nodes and given in=dx is 997 then we can start traversing from back (tail) side.
 
+// pseudo code: 
+
+// If the index is less than 0 or greater than nor equesl to length return null.
+// If the index is less than 0r equal half of the lenght of list 
+        // Loop through the list starting from the head and loop through towards middle/
+        // Return node once found.
+//If the index is greater than half of the length of list,
+        // Loop through the list starting from tail and towards middle.
+        //return the node once found.
 
 class Node {
     constructor(val) {
