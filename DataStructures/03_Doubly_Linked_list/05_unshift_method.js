@@ -1,14 +1,13 @@
-//shift method: Doubly Linked list
-//psuedo code:
+//unshift method: Doubly Linked list - Adding a node in start of DLL.
 
-// if there is no tail and no head retrun undefined.
-// Store the current tail in a variable to retrurn later.
-// If the length is 1, set the head and tail property to be null.
-// update the head to be next of the old head.
-// set the heads prev property to null.
-// set the old head next to null.
-// Decrement the length;
-// return value removed / this
+//psuedo code:
+// create a new node with the value passed to the funciton.
+// if the length is  0 then make the new Node as head and tail.
+// other wise, set the previous property of the current head to new node.
+// set the next property of the new node to the current head.
+// make the current head as new Node.
+// increment the length.
+// return the DLL.
 
 
 class Node {
