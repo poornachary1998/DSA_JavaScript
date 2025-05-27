@@ -1,18 +1,19 @@
-//Insert Method:
-//Adding a node in DLL by certail position.
+//remove Method:
+//removing a node in DLL by certail position.
 
-//if the index is less than 0 or greeater than or equal to length return false.
-// If the index is  0, unshift
-// if the index is at same length of list then use push.
-// use the get method to access the index - 1 as found Node
-// store a new vriable for index value as nextFoundNode.
-// create a new node
-// set the next property of foundNode to the new Node
-// point the prev property of new Node to found Node.
-//  point the nextDFoundNode prev property to new node.
-// point the next property of new node as nextFoundnode.
-// increment the length.
-// return true
+// If the index is less than zero or greater than or equal to the length, return undefined.
+
+// If the index is 0, use shift.
+
+// If the index is the same as length - 1, use pop.
+
+// Use the get method to retrieve the item to be removed.
+
+// Update the next and prev properties to remove the found node from the list.
+
+// Set next and prev to null on the found node.
+
+// Decrement the length.
 
 class Node {
     constructor(val) {
