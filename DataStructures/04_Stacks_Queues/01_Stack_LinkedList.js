@@ -29,6 +29,18 @@ class Stack{
         this.size++
         return this
     }
+
+    pop(){
+        if(!this.first) return undefined;
+        if(this.size === 0){
+            this.last = null
+        }
+        var firstremoved = this.first
+        this.first = this.first.next
+        this.size--;
+        return console.log(firstremoved)
+    }
+
     print(){
         let current = this.first;
         while (current) {
@@ -45,4 +57,5 @@ stackSLL.push(10)
 stackSLL.push(20)
 stackSLL.push(30)
 stackSLL.push(40)
+stackSLL.pop()
 stackSLL.print()
