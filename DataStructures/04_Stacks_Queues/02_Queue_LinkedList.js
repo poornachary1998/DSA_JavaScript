@@ -27,6 +27,22 @@ class Queue {
         return this
     }
 
+    dequeue(){
+        if(!this.first) return undefined;
+        let currentfirst = this.first;
+        if(this.size === 1){
+             this.first = null;
+    this.last = null; 
+        } else {
+            
+            this.first = currentfirst.next
+            currentfirst.next = null
+            
+        }
+        this.size--
+        return console.log("",currentfirst);
+    }
+
     print(){
         let current = this.first;
         while(current){
@@ -40,8 +56,8 @@ class Queue {
 
 let QueueLL = new Queue;
 QueueLL.enqueue(10);
+// QueueLL.dequeue()
 QueueLL.enqueue(20);
 QueueLL.enqueue(30);
-
-
+QueueLL.dequeue()
 QueueLL.print()
