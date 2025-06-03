@@ -107,7 +107,6 @@ find(val) {
       currentNode = currentNode.right;
     }
   }
-
   return undefined; // Not found
 }
 
