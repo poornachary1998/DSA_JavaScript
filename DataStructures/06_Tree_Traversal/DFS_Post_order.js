@@ -140,21 +140,24 @@ return console.log(visited);
 // Create a variable to store the values of nodes visited.
 // Store the root of BST in a variable called current.
 // Write helper function which accepts a node.
-//     PUSH the value of the node to the variable that stores the values.
 //     if the node has a left propperty, call the helper function with the left property on node.
 //     if the node has a right property, call the helper funciton with the right property on node.
+
+//     PUSH the value of the node to the variable that stores the values. ******
+
 
 // Invote the helper funtcion with current value.
 
 // return data.
-DFSPreorder(){
+DFSPostorder(){
 let visited = [];
 let current = this.root;
 
 function traverse(node){
-visited.push(node.value);
-if(node.left) traverse(node.left);
-if(node.right) traverse(node.right)
+// visited.push(node.value); //-- Root
+if(node.left) traverse(node.left); //--left
+if(node.right) traverse(node.right) //--right
+visited.push(node.value); 
 }
 traverse(current);
 return console.log(visited);
@@ -170,7 +173,7 @@ tree.insert(8);
 tree.insert(20);
 
 // tree.BreadthFirstSearch()
-tree.DFSPreorder()
+tree.DFSPostorder()
 
 // let BST = new BinarySearchTree();
 // BST.root = new Node(10);
