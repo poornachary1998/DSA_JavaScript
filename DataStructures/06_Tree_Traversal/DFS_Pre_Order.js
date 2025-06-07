@@ -136,6 +136,17 @@ if(node.right) queue.push(node.right);
 return console.log(visited);
 }
 
+//Psuedo code:
+// Create a variable to store the values of nodes visited.
+// Store the root of BST in a variable called current.
+// Write helper function which accepts a node.
+//     PUSH the value of the node to the variable that stores the values.
+//     if the node has a left propperty, call the helper function with the left property on node.
+//     if the node has a right property, call the helper funciton with the right property on node.
+
+// Invote the helper funtcion with current value.
+
+// return data.
 DFSPreorer(){
 let visited = [];
 let current = this.root;
