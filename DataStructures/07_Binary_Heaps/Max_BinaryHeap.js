@@ -3,52 +3,69 @@
 
 // Step 2: Bubble Up
 // Initialize:
-
 // index = last index of the array (values.length - 1)
-
 // parentIndex = Math.floor((index - 1) / 2)
-
 // Loop until heap property is restored:
-
 // While the value at parentIndex is less than the value at index:
-
 // Swap the values at index and parentIndex
-
 // Set index = parentIndex
-
 // Recalculate parentIndex = Math.floor((index - 1) / 2)
 
+// class MaxBinaryHeap{
+//     constructor(){
+//         this.values = [];
+//     }
+
+
+
+// insert(element){
+//     this.values.push(element);
+//     this.bubbleUp();
+    
+// }
+
+// bubbleUp(){
+//     var index = this.values.length - 1;
+// const currentElement = this.values[index];
+//     while(index>0){
+//         var parentIndex = Math.floor((index - 1) / 2)
+
+//         let parent = this.values[parentIndex];
+
+//         if(currentElement <= parent) break;
+
+//         this.values[parentIndex] = currentElement;
+//         this.values[index] = parent;
+//         index = parentIndex
+//     }
+// }
+
+// }
+
 class MaxBinaryHeap{
-    constructor(){
-        this.values = [];
-    }
-
-
+constructor(){
+this.values = [];
+}
 
 insert(element){
     this.values.push(element);
-    this.bubbleUp();
-    
+    this.bubbleup();
 }
+bubbleup(){
+    let index = this.values.length - 1;
+    let newElement = this.values[index];
 
-bubbleUp(){
-    var index = this.values.length - 1;
-const currentElement = this.values[index];
     while(index>0){
-        var parentIndex = Math.floor((index - 1) / 2)
+        let parentIndex = Math.floor((index - 1) / 2)
+        let parentvalue = this.values[parentIndex];
 
-        let parent = this.values[parentIndex];
+        if(newElement <= parentvalue) break;
 
-        if(currentElement <= parent) break;
-
-        this.values[parentIndex] = currentElement;
-        this.values[index] = parent;
-        index = parentIndex
+this.values[parentIndex] = newElement;
+this.values[index] = parentvalue;
+index = parentIndex;
     }
-}
-
-}
-
+}}
 
 let heap = new MaxBinaryHeap();
 heap.insert(41);
