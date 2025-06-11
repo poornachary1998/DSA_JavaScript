@@ -11,37 +11,6 @@
 // Set index = parentIndex
 // Recalculate parentIndex = Math.floor((index - 1) / 2)
 
-// class MaxBinaryHeap{
-//     constructor(){
-//         this.values = [];
-//     }
-
-
-
-// insert(element){
-//     this.values.push(element);
-//     this.bubbleUp();
-    
-// }
-
-// bubbleUp(){
-//     var index = this.values.length - 1;
-// const currentElement = this.values[index];
-//     while(index>0){
-//         var parentIndex = Math.floor((index - 1) / 2)
-
-//         let parent = this.values[parentIndex];
-
-//         if(currentElement <= parent) break;
-
-//         this.values[parentIndex] = currentElement;
-//         this.values[index] = parent;
-//         index = parentIndex
-//     }
-// }
-
-// }
-
 class MaxBinaryHeap{
 constructor(){
 this.values = [];
