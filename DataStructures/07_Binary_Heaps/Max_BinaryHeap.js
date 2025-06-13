@@ -1,6 +1,5 @@
 // Step 1: Insert
 // Push the new value to the end of the values array (heap).
-
 // Step 2: Bubble Up
 // Initialize:
 // index = last index of the array (values.length - 1)
@@ -12,6 +11,7 @@
 // Recalculate parentIndex = Math.floor((index - 1) / 2)
 
 class MaxBinaryHeap{
+    
 constructor(){
 this.values = [];
 }
