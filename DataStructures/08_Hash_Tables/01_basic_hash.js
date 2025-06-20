@@ -7,3 +7,19 @@ function hash(key, arrayLen) {
   }
   return total;
 }
+
+
+console.log(hash("pink", 10)) 
+//0
+console.log(hash("blue", 10)) 
+/0
+console.log(hash("black", 10)) 
+//9
+console.log(hash("orange", 10)) 
+//0
+console.log(hash("purple", 10)) 
+//8
+console.log(hash("cyan", 10)) 
+//3
+
+
