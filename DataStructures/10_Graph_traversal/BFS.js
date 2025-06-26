@@ -73,8 +73,6 @@ class Graph{
             console.log(queue)
             currentVertex = queue.shift();
             result.push(currentVertex);
-           
-
             this.adjacencyList[currentVertex].forEach(neighbor => {
                 if(!visited[neighbor]){
                     visited[neighbor] = true;
@@ -106,6 +104,9 @@ g.addEdge("D","E")
 g.addEdge("D","F")
 g.addEdge("E","F")
 
+g.breadthFirst("A")
+console.log(g.breadthFirst("A"))
+
 //          A
 //        /   \
 //       B     C
@@ -117,3 +118,12 @@ g.addEdge("E","F")
 // QUEUE: []
 // RESULT: [A, B, C, D, E, F]
 
+
+
+// [ 'A' ]
+// [ 'B', 'C' ]
+// [ 'C', 'D' ]
+// [ 'D', 'E' ]
+// [ 'E', 'F' ]
+// [ 'F' ]
+// [ 'A', 'B', 'C', 'D', 'E', 'F' ]
